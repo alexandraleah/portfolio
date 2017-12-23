@@ -1,1 +1,679 @@
-/*Scrollable pages  based on SMINT http://www.outyear.co.uk/smint/demo/Responsive nav bar adapted from http://www.hongkiat.com/blog/responsive-web-nav */* {margin: 0; padding: 0; outline: 0;}/*For browsers that do not use html5*/header, main, nav, footer, section, article, figure, figcaption,aside { display: block; }body {	font-family: "century gothic", sans-serif;	margin:0px;	padding:0px;	width:100%;	font-size: 62.5%;	}a {	color: #3e3e3e;}ul {	list-style-type: none; }h1 {	color:#ffffff;}h2{	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;	font-style: italic;	font-weight: 200;	margin:0 0 15px 0;	font-size: 1.5em;	text-align:center;	padding:1em;}h3 {	font-size: 1em;	font-weight: bold;	padding:1em 0;}p {	margin: 1em auto;	padding-bottom: 1em;}.clear {	clear: both;}.wrap {	width: 100%;	z-index: 10;	position: relative;	padding: 0;}.section {	width: 100%;	z-index: 10;	position: relative;	margin: 0 auto;	padding: 0 0 2em 0;	color: #000;}.inner {	width: 70%;	margin: 0 auto;	position: relative;	min-height: 5em;	padding-top:1em;	font-size: 1.8em;	font-family: "century gothic", sans-serif;	font-weight: 300;}.inner:after {	  content: "";	  display: table;	  clear: both;}/*Styles for navigation bar*/nav {	height: 7em;	z-index: 1000;	width: 100%;	position:relative;	background: #4B001C;}nav ul {	padding: 0;	margin: 0 auto;	width: 100%;	height: 7em;}#cayuga h1 {		font-size: 2.5em;		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;		font-style: italic;		font-weight: 200;		padding: 0 1em;}nav li {	display: inline;	float: left;}nav a {	color: #fff;	display: inline-block;	width: 100px;	text-align: center;	text-decoration: none;	font-size: 1.4em;	line-height: 5em;	background: #8F0437;	}nav a:hover {	background: #4B001C;}#cayuga a {	width: auto;	background-color: #4B001C;	background: #4B001C;}nav li a {	border-right: 1px solid #4B001C;}nav li:last-child a {    border-right: 1px solid #4B001C;}nav a#pull {    display: none;} .active {	background: #67B315;}.clearfix:before,.clearfix:after {    content: " ";    display: table;}.clearfix:after {    clear: both;}.clearfix {    *zoom: 1;}.end {	margin: 0;}/*Navigation bar on tablet or phone*/@media screen and (max-width: 936px) {    nav {        height: auto;    }    nav ul {        width: 100%;        display: block;        height: auto;    }   nav li {        width: 50%;        float: left;        position: relative;      }        #cayuga {    	display:none;    	    }        nav li a {       border-bottom: 1px solid #4B001C;       border-left: 1px solid #4B001C;       }        nav a {        text-align: left;        width: 100%;        text-indent: 1.5em;        line-height: 2.5em;	    }     nav ul {        display: none;        height: auto;    }    nav a#pull {        display: block;        background-color: #4B001C;        width: 100%;        position: relative;        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;		font-style: italic;		font-size: 1.6em;    }        nav a#pull:after {        content:"";        background: url('../images/nav-icon.png') no-repeat;        width: 30px;        height: 30px;        display: inline-block;        position: absolute;        right: 15px;        top: 10px;    }    .active {	background: #8F0437;	}}/*Navigation bar on small phones*/@media only screen and (max-width : 320px) {    nav li {        display: block;        float: none;        width: 100%;    }    nav li a {        border-bottom: 1px solid #fff3e2;    }}/* SECTIONS *//*hiding the first section in the template which I do not use */.sTop {	height:0px;}.hero {	height: 800px;	width:100%;	text-align: center;	background:#8F0437;	background-image:url(../images/purple_flowers_sharon2.jpg);	background-repeat: no-repeat;	background-size: cover;	background-position:center;	color:#fff;}#tagline {	font-size:2em;	width: 100%;	margin-left: auto;	margin-right: auto;	margin-top: 200px;	text-shadow: 2px 2px #4B001C;}.about {	min-height: 90vh;	background: #fff3e2;	background-image:url(../images/daylily_sharon2.png);	background-repeat: no-repeat;	background-size: 30%;	background-position: left bottom;}.visit {	min-height:90vh;	background: #ffffff;	background-image:url(../images/daylily_sharon3.png);	background-repeat: no-repeat;	background-size: 30%;	background-position: left bottom;}/*No background image in about section on small screens*/ @media only screen and (max-width : 600px) {		.about .visit {		background-image:none;	}	}.browse {	min-height:90vh;	background: #fff3e2;}.contact {	min-height:90vh;	background: #ffffff;}.resources {	min-height:90vh;	background: #fff3e2;}/*style for buttons (buttons not currently in use)*/.mybutton {	background: #8F0437;	color: #ffffff;	padding: 15px 30px 15px 30px;	width: 250px;	border-radius: 5px;	text-align:center;	border:none;	left:40%;	cursor: pointer;}.mybutton:hover {	background: #4B001C;	}.newsButton {	background:#8F0437;	color: #ffffff;	padding: 8px 15px 8px 15px;	border-radius: 5px;	text-align:center;	border:none;	cursor: pointer;}.newsButton:hover {	background: #24000d;}footer .newsButton {	margin-left: 30px;	font-size:1.4em;}#contactinfo .newsButton {	font-size: 1em;}#closebutton {	float:right;	padding:5px;	cursor: pointer;}/*Style for forms - forms not currently in use*/input {	font-size: 1em;	font-family: "century gothic", sans-serif;}#email-form-div {	display:none;	font-size:1.8em;	width:500px;	position: fixed;	z-index:2000;	left:50%;	margin-left:-250px;	bottom: 50%;	margin-bottom:-250px;	cursor: move;}#email-form-div .myform {	box-shadow:  10px 10px 5px #A8A8A8;}@media only screen and (max-width : 500px) {	#email-form-div {		width:100vw;		left:0;		height:100vw;	}		#email-form-div .myform {		box-shadow: none;	}}/*Responsive iframes see http://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design for more info*/.calendar-container {	width: 100%;    position: relative;    padding-bottom: 95%;    margin-bottom: 25px;    height: 0;    overflow: hidden;}.calendar-container iframe {    position: absolute;    top:0;    left: 0;    width: 100%;    height: 100%;}.map-container {	min-width: 224px;	width: 90%;    position: relative;    padding-bottom: 70%;    height: 0;    overflow: hidden;	margin-top:15px;}.map-container iframe {	    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}/*Two column layout on screens larger than 960px 1 column layout on smaller screens*/.floatright {	float: right;	margin-right:5%;	width:45%;}.floatleft {	float: left;	margin-right:5%;	width:45%;}.wide {	width:60%;}.narrow {	width: 30%}@media only screen and (max-width : 960px) {	.floatleft {	float: none;	width:100%;	}		.floatright {		float:none;	}	.wide {		width:100%;	}		.narrow {		width:100%;	}			.map-container {	width: 100%;    position: relative;    padding-bottom: 50%;	}		.calendar-container {    padding-bottom: 50%;	}}/*Removing min heights from sections when on phone*/@media only screen and (max-width : 600px) {	.hero {	max-height:100vh;	}	.visit {		min-height:0	}	.browse {		min-height:0;	}	.contact {		min-height:0;	}	.resources {		min-height:0;		padding-bottom:100px;	}		.about {	min-height: 0;}		}@media only screen and (max-width : 400px) {		.map-container {    padding-bottom: 100%;	}		.calendar-container {    padding-bottom: 100%;	}	/*add underline and link color to phone numbers on phone*/	.phone {	color: #3e3e3e;	text-decoration: underline;	}}.inventory {	margin-right:auto;	margin-left:auto;	margin-bottom: 30px;}.inventory li { 	display: inline-block; 	padding: 10px 20px 10px 0px;}/*Styles for gallery*/.detail h3 {	font-family: "century gothic", sans-serif;	font-size: 1.5em;	font-weight: bold;	color: #000000;	padding-bottom:0px;	}.detail p {	color: #000000;	font-family: "century gothic", sans-serif;	font-size: 1.5em;	margin-bottom:0px;	padding-bottom:0px;}.flower img { 	width: 200px;	height:200px;}.flower .detail { display: none;}.featherlight .flower {	display: block;}.featherlight .flower .detail {	display: block;	max-width: 400px;}.featherlight .flower img {	width:100%;	height:100%;	max-width: 400px;	max-height:400px	}	.caption {	width: 200px; 	font-size:.5em; } .caption a { 	text-decoration: none; }#contactinfo p {	margin: 10px auto;	padding: 0px;}.emphasis {	font-style: italic;}/*Form containers*/.myform {	width:100%;	background: #8F0437;	padding:2%;	border-radius: 10px;	color: #ffffff;}/* Form adapted from sanwebe.com 10 CSS HTML Form Designs form style 1*/.form-style-1 {    margin:10px auto;}.form-style-1 li {    padding: 0;    display: block;    list-style: none;    margin: 10px 0 0 0;}.form-style-1 label{    margin:3px 3px 6px 0px;    padding:0px;    display:block;    font-weight: bold;}.form-style-1 input[type=text], .form-style-1 input[type=date],.form-style-1 input[type=datetime],.form-style-1 input[type=number],.form-style-1 input[type=search],.form-style-1 input[type=time],.form-style-1 input[type=url],.form-style-1 input[type=email],.form-style-1 input[type=tel],textarea, select{    box-sizing: border-box;    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    border:1px solid #BEBEBE;    padding: 7px;    margin:0px;    -webkit-transition: all 0.30s ease-in-out;    -moz-transition: all 0.30s ease-in-out;    -ms-transition: all 0.30s ease-in-out;    -o-transition: all 0.30s ease-in-out;    outline: none;  	font-size: 1em;	font-family: "century gothic", sans-serif;}.form-style-1 input[type=text]:focus, .form-style-1 input[type=date]:focus,.form-style-1 input[type=datetime]:focus,.form-style-1 input[type=number]:focus,.form-style-1 input[type=search]:focus,.form-style-1 input[type=time]:focus,.form-style-1 input[type=url]:focus,.form-style-1 input[type=email]:focus,.form-style-1 input[type=tel]:focus,.form-style-1 textarea:focus, .form-style-1 select:focus{				background: #fff3e2;}.form-style-1 .field-divided{    width: 48%;}.form-style-1 .field-long{    width: 98%;}.form-style-1 .field-select{    width: 98%;}.form-style-1 .field-textarea{    height: 100px;}.form-style-1 .myformbutton,  .form-style-1  input[type=button]{	background: #4B001C;    padding: 15px 30px 15px 30px;    border: none;	border-radius: 5px;    color: #fff;	font-size: 1em;	font-family: "century gothic", sans-serif;	cursor: pointer;	}.form-style-1 .myformbutton:hover, .form-style-1  input[type=button]:hover{    background: #24000d;    box-shadow:none;    -moz-box-shadow:none;    -webkit-box-shadow:none;	font-size: 1em;	font-family: "century gothic", sans-serif;	cursor: pointer;}/*Image on resource page*/.resources img {	border-radius: 10px;	margin-bottom: 50px;	display: block;	margin-left:auto;	margin-right: auto;	max-width: 500px;	width:100%;}/*Styles for footer*/footer {	width:100%;	position:fixed;	right: 0px;	bottom:0px;	z-index: 1000;	font-size: 1em;	font-family: "century gothic", sans-serif;	font-weight: 300;	background:#4B001C;	color:#ffffff;	}	#footerContent {	padding: 15px;}	footer a {	color: #ffffff;}#copyright {	text-align:right;	line-height: 1.5;}footer .newsButton {	float:left;	margin-right: 10px;}/*On smaller screen footer is not fixed and has only one column*/@media screen and (max-width: 934px) {	footer {		position: static;		}	#copyright {		text-align:left;		margin-left:30px;	}	footer .newsButton {		float:none;		margin-bottom: 10px;	}}
+/*Scrollable pages  based on SMINT http://www.outyear.co.uk/smint/demo/
+Responsive nav bar adapted from http://www.hongkiat.com/blog/responsive-web-nav */
+
+* {margin: 0; padding: 0; outline: 0;}
+
+/*For browsers that do not use html5*/
+header, main, nav, footer, section, article, figure, figcaption,
+aside { display: block; }
+
+body {
+	font-family: "century gothic", sans-serif;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	font-size: 62.5%;
+}
+
+a {
+	color: #3e3e3e;
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1 {
+	color:#E8E9F3;
+}
+
+h2{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-style: italic;
+	font-weight: 200;
+	margin:0 0 15px 0;
+	font-size: 1.5em;
+	text-align:center;
+	padding:1em;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+	padding:1em 0;
+}
+
+p {
+	margin: 1em auto;
+	padding-bottom: 1em;
+}
+
+.clear {
+	clear: both;
+}
+.wrap {
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	padding: 0;
+}
+
+.section {
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 0 2em 0;
+	color: #262629;
+	background-color:A6A6A8;
+}
+
+.inner {
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+	min-height: 5em;
+	padding-top:1em;
+	font-size: 1.8em;
+	font-family: "century gothic", sans-serif;
+	font-weight: 300;
+}
+
+.inner:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+}
+/*Styles for navigation bar*/
+nav {
+	height: 7em;
+	z-index: 1000;
+	width: 100%;
+	position:relative;
+	background: #334E58;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 7em;
+}
+
+#cayuga h1 {
+		font-size: 2.5em;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-style: italic;
+		font-weight: 200;
+		padding: 0 1em;
+}
+nav li {
+	display: inline;
+	float: left;
+}
+nav a {
+	color: #E8E9F3;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.4em;
+	line-height: 5em;
+	background: #334E58;
+}
+nav a:hover {
+	background: #102C37;
+}
+
+#cayuga a {
+	width: auto;
+	background: #334E58;
+}
+
+nav li a {
+	border-right: 1px solid #334E58;
+}
+
+nav li:last-child a {
+    border-right: 1px solid #334E58;
+}
+
+nav a#pull {
+    display: none;
+}
+
+.active {
+	background: #102C37;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.end {
+	margin: 0;
+}
+
+/*Navigation bar on tablet or phone*/
+@media screen and (max-width: 936px) {
+    nav {
+       height: auto;
+    }
+    nav ul {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+   nav li {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+
+    #cayuga {
+    	display:none;
+
+    }
+
+    nav li a {
+       border-bottom: 1px solid #334E58;
+       border-left: 1px solid #334E58;
+       }
+
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 1.5em;
+        line-height: 2.5em;
+    }
+     nav ul {
+        display: none;
+        height: auto;
+    }
+    nav a#pull {
+        display: block;
+        background-color: #334E58;
+        width: 100%;
+        position: relative;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-style: italic;
+		font-size: 1.6em;
+    }
+
+    nav a#pull:after {
+        content:"";
+        background: url('../images/nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    .active {
+	background: #102C37;
+	}
+}
+/*Navigation bar on small phones*/
+@media only screen and (max-width : 320px) {
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    nav li a {
+        border-bottom: 1px solid #fff3e2;
+    }
+}
+
+/* SECTIONS */
+/*hiding the first section in the template which I do not use */
+.sTop {
+	height:0px;
+}
+
+.hero {
+	width:100%;
+	text-align: center;
+	background:#E8E9F3;
+	color:#E8E9F3;
+}
+.section {
+	min-height:90vh;
+	background-color:#E8E9F3;
+}
+#tagline {
+	font-size:2em;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	text-shadow: 2px 2px #4B001C;
+}
+
+/*style for buttons (buttons not currently in use)*/
+.mybutton {
+	background: #8F0437;
+	color: #ffffff;
+	padding: 15px 30px 15px 30px;
+	width: 250px;
+	border-radius: 5px;
+	text-align:center;
+	border:none;
+	left:40%;
+	cursor: pointer;
+}
+.mybutton:hover {
+	background: #4B001C;
+
+}
+.newsButton {
+	background:#8F0437;
+	color: #ffffff;
+	padding: 8px 15px 8px 15px;
+	border-radius: 5px;
+	text-align:center;
+	border:none;
+	cursor: pointer;
+}
+.newsButton:hover {
+	background: #24000d;
+}
+
+footer .newsButton {
+	margin-left: 30px;
+	font-size:1.4em;
+}
+
+#contactinfo .newsButton {
+	font-size: 1em;
+}
+
+#closebutton {
+	float:right;
+	padding:5px;
+	cursor: pointer;
+}
+
+/*Style for forms - forms not currently in use*/
+input {
+	font-size: 1em;
+	font-family: "century gothic", sans-serif;
+}
+#email-form-div {
+	display:none;
+	font-size:1.8em;
+	width:500px;
+	position: fixed;
+	z-index:2000;
+	left:50%;
+	margin-left:-250px;
+	bottom: 50%;
+	margin-bottom:-250px;
+	cursor: move;
+}
+
+#email-form-div .myform {
+	box-shadow:  10px 10px 5px #A8A8A8;
+}
+
+@media only screen and (max-width : 500px) {
+	#email-form-div {
+		width:100vw;
+		left:0;
+		height:100vw;
+	}
+		#email-form-div .myform {
+		box-shadow: none;
+	}
+
+}
+
+/*Responsive iframes see http://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design for more info*/
+.calendar-container {
+	width: 100%;
+    position: relative;
+    padding-bottom: 95%;
+    margin-bottom: 25px;
+    height: 0;
+    overflow: hidden;
+}
+.calendar-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-container {
+	min-width: 224px;
+	width: 90%;
+    position: relative;
+    padding-bottom: 70%;
+    height: 0;
+    overflow: hidden;
+	margin-top:15px;
+}
+.map-container iframe {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Two column layout on screens larger than 960px 1 column layout on smaller screens*/
+.floatright {
+	float: right;
+	margin-right:5%;
+	width:45%;
+
+}
+
+.floatleft {
+	float: left;
+	margin-right:5%;
+	width:45%;
+}
+.wide {
+	width:60%;
+}
+
+.narrow {
+	width: 30%
+}
+
+@media only screen and (max-width : 960px) {
+	.floatleft {
+	float: none;
+	width:100%;
+	}
+
+	.floatright {
+		float:none;
+	}
+	.wide {
+		width:100%;
+	}
+
+	.narrow {
+		width:100%;
+	}
+
+	.map-container {
+	width: 100%;
+    position: relative;
+    padding-bottom: 50%;
+	}
+
+	.calendar-container {
+    padding-bottom: 50%;
+	}
+}
+
+/*Removing min heights from sections when on phone*/
+@media only screen and (max-width : 600px) {
+	.hero {
+	max-height:100vh;
+	}
+
+
+
+	.contact {
+		min-height:0;
+	}
+
+
+}
+
+
+@media only screen and (max-width : 400px) {
+
+	.map-container {
+    padding-bottom: 100%;
+	}
+
+	.calendar-container {
+    padding-bottom: 100%;
+	}
+	/*add underline and link color to phone numbers on phone*/
+	.phone {
+	color: #3e3e3e;
+	text-decoration: underline;
+	}
+}
+
+.inventory {
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom: 30px;
+}
+.inventory li {
+	display: inline-block;
+ 	padding: 10px 20px 10px 0px;
+
+}
+
+/*Styles for gallery*/
+.detail h3 {
+	font-family: "century gothic", sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #000000;
+	padding-bottom:0px;
+}
+
+.detail p {
+	color: #000000;
+	font-family: "century gothic", sans-serif;
+	font-size: 1.5em;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+.flower img {
+	width: 200px;
+	height:200px;}
+
+.flower .detail { display: none;}
+
+.featherlight .flower {
+	display: block;
+}
+
+.featherlight .flower .detail {
+	display: block;
+	max-width: 400px;
+}
+
+.featherlight .flower img {
+	width:100%;
+	height:100%;
+	max-width: 400px;
+	max-height:400px
+	}
+
+.caption {
+	width: 200px;
+ 	font-size:.5em;
+ }
+ .caption a {
+ 	text-decoration: none;
+ }
+#contactinfo p {
+	margin: 10px auto;
+	padding: 0px;
+}
+.emphasis {
+
+	font-style: italic;
+}
+
+
+/*Form containers*/
+.myform {
+	width:100%;
+	background: #8F0437;
+	padding:2%;
+	border-radius: 10px;
+	color: #ffffff;
+}
+
+/* Form adapted from sanwebe.com 10 CSS HTML Form Designs form style 1*/
+.form-style-1 {
+    margin:10px auto;
+}
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form-style-1 label{
+    margin:3px 3px 6px 0px;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+.form-style-1 input[type=tel],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+	font-size: 1em;
+	font-family: "century gothic", sans-serif;
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 input[type=tel]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+				background: #fff3e2;
+}
+.form-style-1 .field-divided{
+    width: 48%;
+}
+
+.form-style-1 .field-long{
+    width: 98%;
+}
+.form-style-1 .field-select{
+    width: 98%;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+
+
+.form-style-1 .myformbutton,  .form-style-1  input[type=button]{
+	background: #4B001C;
+    padding: 15px 30px 15px 30px;
+    border: none;
+	border-radius: 5px;
+    color: #fff;
+	font-size: 1em;
+	font-family: "century gothic", sans-serif;
+	cursor: pointer;
+
+}
+.form-style-1 .myformbutton:hover, .form-style-1  input[type=button]:hover{
+    background: #24000d;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+	font-size: 1em;
+	font-family: "century gothic", sans-serif;
+	cursor: pointer;
+
+}
+/*Image on resource page*/
+.resources img {
+	border-radius: 10px;
+	margin-bottom: 50px;
+	display: block;
+	margin-left:auto;
+	margin-right: auto;
+	max-width: 500px;
+	width:100%;
+}
+
+/*Styles for footer*/
+footer {
+	width:100%;
+	position:fixed;
+	right: 0px;
+	bottom:0px;
+	z-index: 1000;
+	font-size: 1em;
+	font-family: "century gothic", sans-serif;
+	font-weight: 300;
+	background:#334E58;
+	color:#E8E9F3;
+
+	}
+
+#footerContent {
+	padding: 15px;
+}
+
+
+footer a {
+	color: #ffffff;
+}
+
+#copyright {
+	text-align:right;
+	line-height: 1.5;
+}
+
+footer .newsButton {
+	float:left;
+	margin-right: 10px;
+}
+/*On smaller screen footer is not fixed and has only one column*/
+@media screen and (max-width: 934px) {
+	footer {
+		position: static;
+	}
+	#copyright {
+		text-align:left;
+		margin-left:30px;
+	}
+
+	footer .newsButton {
+		float:none;
+		margin-bottom: 10px;
+	}
+}
